@@ -9,7 +9,9 @@ import { GenericContract } from 'eth-components/ant/generic-contract';
 import { Hints, Subgraph, ExampleUI } from '~~/components/pages';
 
 import { useEventListener } from 'eth-hooks';
-import { MainPageMenu, MainPageContracts, MainPageFooter, MainPageHeader } from './components/main';
+import { MainPageMenu, MainPageContracts, 
+  // MainPageFooter
+MainPageHeader } from './components/main';
 import { useScaffoldProviders as useScaffoldAppProviders } from '~~/components/main/hooks/useScaffoldAppProviders';
 import { useBurnerFallback } from '~~/components/main/hooks/useBurnerFallback';
 import { useScaffoldHooksExamples as useScaffoldHooksExamples } from './components/main/hooks/useScaffoldHooksExamples';
@@ -102,7 +104,7 @@ export const Main: FC = () => {
             <MainPageContracts scaffoldAppProviders={scaffoldAppProviders} />
           </Route>
           {/* you can add routes here like the below examlples */}
-          <Route path="/hints">
+          {/* <Route path="/hints">
             <Hints
               address={ethersContext?.account ?? ''}
               yourCurrentBalance={yourCurrentBalance}
@@ -126,7 +128,7 @@ export const Main: FC = () => {
                 blockExplorer={NETWORKS.mainnet.blockExplorer}
               />
             )}
-          </Route>
+          </Route> */}
           {/* Subgraph also disabled in MainPageMenu, it does not work, see github issue! */}
           {/* 
           <Route path="/subgraph">
@@ -136,7 +138,7 @@ export const Main: FC = () => {
         </Switch>
       </BrowserRouter>
 
-      <MainPageFooter scaffoldAppProviders={scaffoldAppProviders} price={ethPrice} />
+      {/* <MainPageFooter scaffoldAppProviders={scaffoldAppProviders} price={ethPrice} /> */}
     </div>
   );
 };

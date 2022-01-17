@@ -58,12 +58,12 @@ export const MainPageContracts: FC<IMainPageContractsProps> = (props) => {
          *  ❓ Uncomment to display and interact with an external contract (DAI on mainnet):
          ********** */}
         {
-          <GenericContract
-            contractName="DAI"
-            contract={mainnetDai}
-            mainnetAdaptor={props.scaffoldAppProviders.mainnetAdaptor}
-            blockExplorer={NETWORKS.mainnet.blockExplorer}
-          />
+          // <GenericContract
+          //   contractName="DAI"
+          //   contract={mainnetDai}
+          //   mainnetAdaptor={props.scaffoldAppProviders.mainnetAdaptor}
+          //   blockExplorer={NETWORKS.mainnet.blockExplorer}
+          // />
         }
       </>
     </>
